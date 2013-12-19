@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
+
+html * { /*I like this font*/
+	font-family: 'Roboto Slab', sans-serif;
+}
+body {
+	background-color: #eee;
+	margin-top: 2em;
+}
+.navbar {
+	background-color: #555;
+}
+.navbar a {
+	font-size: 3em;
+}
+.navbar * {
+	color: white !important;
+}
+.jumbotron{
+	margin-bottom: 0px;
+	border-radius: 0px !important;	
+}
+
+
+#bio {
+	background-color: #ddd;
+}
+#resume {
+	background-color: #eee;
+}
+#email {
+	background-color: #ddd;
+}
+#github {
+	background-color: #eee;
+}
+
+#body-container {
+	max-width: 9999px;
+	padding-right: 0px;
+	padding-left: 0px;
+}

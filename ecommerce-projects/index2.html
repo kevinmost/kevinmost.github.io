@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Kevin Most</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><strong>Kevin Most</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#email">Email</a></li>
+            <li><a href="#github">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="body-container" class="container">
+
+      <div id="js-project" class="jumbotron">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="images/1.jpg" onclick="changeImage();" id="changing-images" class="img-responsive" />
+          </div>
+          <div class="col-xs-9">
+            <h1>JS project for e-commerce</h1>
+              <p>Here is the date: <script type="text/javascript"> document.write(new Date());</script>
+              <p>Click the picture to the left to change it (credits for pictures to NASA's Astronomy Picture of the Day)</p>
+              <p>Type a background color (hex, RGB, or simple name like "blue" or "red", no quotes) in the box below to change the color of this div</p>
+              <form role="form">
+                <input type="text" placeholder="Enter color. Syntax: #RRGGBB, rgb(RRR,GGG,BBB), or simply a color name" class="form-control" id="color">
+                <button type="submit" value="Submit" onclick="event.preventDefault(); $('#js-project').css('background-color',document.getElementById('color').value);" class="btn btn-success">Color!</button>
+              </form>
+
+          </div>          
+        </div>
+      </div>
+
+      <div id="bio" class="jumbotron">
+        <div class="row">
+          <div class="col-xs-9">
+            <h1>Bio</h1>
+            <p>I'm currently a 3rd-year Computer Science student at St. John's University in Queens, NY.</p>
+            <p><strong>Interests:</strong>
+              
+              <ul>Programming Languages
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML/CSS/JS</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col-xs-3">
+            <img src="../img/icons/profile.jpg" class="img-responsive" />
+          </div>
+        </div>
+      </div>
+
+      <div id="resume" class="jumbotron">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="../img/icons/resume.png" class="img-responsive" />
+          </div>
+          <div class="col-xs-9">
+            <h1>Resume</h1>
+            <p><a href="https://drive.google.com/file/d/0B8ghkqYAru2NZ0lmUWpxMGZSemc/edit?usp=sharing">Take a look at my credentials.</a></p>
+          </div>          
+        </div>
+      </div>
+
+      <div id="email" class="jumbotron">
+        <div class="row">
+          <div class="col-xs-9">
+            <h1>Email</h1>
+            <p>Contact me at kevin@kevinmost.com</p>
+          </div>
+          <div class="col-xs-3">
+            <img src="http://www.flaticon.com/png/256/8988.png" class="img-responsive" />
+          </div>
+        </div>
+      </div>
+
+      <div id="github" class="jumbotron">
+        <div class="row">
+          <div class="col-xs-3">
+            <img src="../img/icons/github.png" class="img-responsive" />
+          </div>
+          <div class="col-xs-9">
+            <h1>GitHub</h1>
+            <p><a href="http://www.github.com/kevinmost">Check out the projects I've created and contributed to!</a></p>
+          </div>          
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+      var currentImageNumber=2;
+      function changeImage() {
+        // $('#changing-images').css('src','/images/' + currentImageNumber + ".jpg");
+        // currentImageNumber++;
+        // if (currentImageNumber == 6) {
+        //   currentImageNumber = 0;
+        // }
+        $('#changing-images').attr('src', 'images/' + currentImageNumber + '.jpg');
+        
+        if (currentImageNumber == 5) {
+          currentImageNumber = 1;
+        }
+        else {
+          currentImageNumber++;
+        }
+      }
+    </script>
+  </body>
+</html>
